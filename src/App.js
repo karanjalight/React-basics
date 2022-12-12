@@ -29,11 +29,19 @@ function App() {
 
     {company==='Itisha'? <h1>Itisha Kila kitu ya Kudish! </h1> : <h1>Not available</h1> }
 
+
+    
     {planets.map((name, key) =>{
+      /* the variable key above should be unique for every component */
+      /* name is a place holder for the values in an array it is used for the queries */
       return (
               
-        
+        /* we use this key in the div to remove the error that this ting should be unique */
+        /* Planet is the imported component*/
+
         <div key={key}>
+
+        
         {name.isGasPlanet && <Planet name={name.name}  />}
         
         
@@ -41,15 +49,6 @@ function App() {
       );
 
     })};
-
-
-
-
-
-
-
-
-      
 
     </div>
   );
